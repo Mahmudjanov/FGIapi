@@ -9,3 +9,12 @@ class Service(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
 
+
+class Product(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+    
+
+
+
+
