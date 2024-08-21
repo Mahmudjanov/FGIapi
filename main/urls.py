@@ -1,14 +1,9 @@
 from django.urls import path
 from.views import *
 
-
 urlpatterns = [
     path('get-banner/', get_banner),
-    ]
-
-
-
-urlpatterns = [
+    path('get-service/', get_service),
     path('get-product/', get_product),
 ]
 
