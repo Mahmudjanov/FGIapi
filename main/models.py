@@ -8,4 +8,4 @@ class Banner(models.Model):
 class Service(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
-    icon = models.ImageField()
+
