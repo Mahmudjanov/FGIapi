@@ -1,3 +1,11 @@
 from django.db import models
 
-# Create your models here.
+class Banner(models.Model):
+    photo = models.ImageField()
+    title = models.CharField(max_length=255)
+    text = models.CharField(max_length=255)
+
+class Service(models.Model):
+    name = models.CharField(max_length=255)
+    description = models.TextField()
+    icon = models.ImageField()
