@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Banner(models.Model):
     photo = models.ImageField()
     title = models.CharField(max_length=255)
@@ -17,5 +18,9 @@ class Product(models.Model):
     
 
 
-
+class Form(models.Model):
+    ism = models.CharField(max_length=100)
+    familiya = models.CharField(max_length=100)
+    email = models.EmailField()
+    text = models.TextField()
 
