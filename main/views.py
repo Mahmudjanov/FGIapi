@@ -1,8 +1,6 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from. serializer import *
-import requests
-from django.shortcuts import redirect
 
 
 @api_view(['GET'])
