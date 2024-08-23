@@ -5,17 +5,22 @@ from. serializer import *
 
 @api_view(['GET'])
 def get_banner(request):
-    balance = Banner.objects.last()
-    serialized_data = BannerSerializer(balance).data
+    banner = Banner.objects.last()
+    serialized_data = BannerSerializer(banner).data
     return Response(serialized_data)
 
 
+api_view(['GET'])
+def get_service(request):
+    service = Service.objects.last()
+    serialized_data = ServiceSerializer(service).data
+    return Response(serialized_data)
 
 
 
 @api_view(['GET'])
 def get_product(request):
-    roduct = Product.objects.last()
-    serialized_data = ProductSerializer(roduct).data 
+    product = Product.objects.last()
+    serialized_data = ProductSerializer(product).data
     return Response(serialized_data)
 
