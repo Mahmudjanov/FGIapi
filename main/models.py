@@ -6,6 +6,13 @@ class Banner(models.Model):
     title = models.CharField(max_length=255)
     text = models.CharField(max_length=255)
 
+
+
+class Phone_number(models.Model):
+    phone_number = models.CharField(max_length=50)
+
+
+
 class Service(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()

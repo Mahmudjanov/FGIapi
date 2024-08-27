@@ -26,3 +26,9 @@ class FormSerializer(serializers.ModelSerializer):
         model = Form
         fields = ['ism', 'familiya', 'email', 'text']
 
+
+
+class Phone_numberSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Phone_number
+        fields = "__all__"

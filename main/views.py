@@ -30,12 +30,19 @@ def get_product(request):
 
 @api_view(['POST'])
 def create_form(request):
-    if request.method == "POST":
-        form = Form.objects.create(
-            ism = request.POST.get("ism"),
-            familiya = request.POST.get("familiya"),
-            email = request.POST.get("email"),
-            text = request.POST.get("text")
-        )
-        serialized_data = FormSerializer(form).data
-        return Response(serialized_data)
+    form = Form.objects.create(
+        ism = request.POST.get("ism"),
+        familiya = request.POST.get("familiya"),
+        email = request.POST.get("email"),
+        text = request.POST.get("text")
+    )
+    serialized_data = FormSerializer(form).data
+    return Response(serialized_data)
+
+
+
+@api_view(['GET'])
+def phone_number(request):
+    phone_number = Phone_number.objects.last()
+    serialized_data = Phone_numberSerializer(phone_number).data
+    return Response(serialized_data)
