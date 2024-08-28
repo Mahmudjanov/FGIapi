@@ -6,6 +6,6 @@ urlpatterns = [
     path('get-service/', get_service),
     path('get-product/', get_product),
     path("create_form/", create_form),
-    path("phone_number/", phone_number),
+    path("get-contact/", contact),
 ]
 

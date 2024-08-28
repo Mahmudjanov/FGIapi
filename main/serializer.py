@@ -28,7 +28,7 @@ class FormSerializer(serializers.ModelSerializer):
 
 
 
-class Phone_numberSerializer(serializers.ModelSerializer):
+class ContactSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Phone_number
+        model = Contact
         fields = "__all__"

@@ -42,7 +42,7 @@ def create_form(request):
 
 
 @api_view(['GET'])
-def phone_number(request):
-    phone_number = Phone_number.objects.last()
-    serialized_data = Phone_numberSerializer(phone_number).data
+def contact(request):
+    contact = Contact.objects.last()
+    serialized_data = ContactSerializer(contact).data
     return Response(serialized_data)

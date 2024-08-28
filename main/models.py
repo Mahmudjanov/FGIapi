@@ -8,11 +8,6 @@ class Banner(models.Model):
 
 
 
-class Phone_number(models.Model):
-    phone_number = models.CharField(max_length=50)
-
-
-
 class Service(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
@@ -30,3 +25,10 @@ class Form(models.Model):
     familiya = models.CharField(max_length=100)
     email = models.EmailField()
     text = models.TextField()
+
+
+
+class Contact(models.Model):
+    phone_number = models.CharField(max_length=50)
+    email = models.EmailField()
+    address = models.CharField(max_length=100)
